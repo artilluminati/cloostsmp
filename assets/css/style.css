@@ -232,7 +232,6 @@ img {
     margin: 0 auto;
     height: calc(100vh - 65px);
 }
-
 .banner__airship-layer {
     position: absolute;
     max-width: 1456px;
@@ -241,7 +240,6 @@ img {
     display: flex;
     justify-content: flex-end;
 }
-
 .banner__airship-layer img {
     width: 319px;
     height: 397px;
