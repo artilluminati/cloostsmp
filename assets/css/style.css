@@ -606,6 +606,7 @@ img {
     max-width: 1125px;
 
     display: grid;
+    align-items: center;
     grid-template-columns: 6fr 4fr;
     column-gap: 25px;
 }
@@ -629,6 +630,10 @@ img {
 .call-to-action__game-info {
     display: flex;
     column-gap: 40px;
+}
+
+.call-to-action__btn {
+    width: calc(50% - 25px / 2);
 }
 
 /* media queries */
