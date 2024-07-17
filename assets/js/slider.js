@@ -16,8 +16,9 @@ var aboutSlideNum = 0;
 var historySlideNum = 0;
 var aboutTimeout;
 
-function aboutToSlide() {
-    aboutTimeout = window.setTimeout(() => {
+async function aboutToSlide() {
+    console.log("klog");
+    aboutTimeout = window.setInterval(() => {
         aboutSlideNum++;
         if (aboutSlideNum > aboutSliderCards.length - 1) {
             aboutSlideNum = 0;
@@ -32,10 +33,15 @@ function aboutToSlide() {
         aboutSliderProgressbar.classList.add(
             "about-slider__progressbar-animation"
         );
-
-        aboutToSlide(aboutSlideNum);
     }, 4000);
 }
+
+function aboutNextSlide() {
+    console.log("next");
+    window.clearInterval(aboutTimeout);
+    aboutToSlide();
+}
+
 const HistorySlideTo = (num) => {
     historySlideNum = num;
     historySliderDots.forEach((dot) => {
@@ -74,11 +80,6 @@ const HistoryPrevSlide = () => {
         card.style = `transform: translateY(-${historySlideNum * 100}%)`;
     });
 };
-
-function aboutNextSlide() {
-    window.clearTimeout(aboutTimeout);
-    aboutToSlide();
-}
 
 ModGuideTabSelect = (targetTab) => {
     modGuideCards.forEach((card) => {
