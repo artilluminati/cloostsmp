@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/assets/css/style.css" />
         <link
             rel="shortcut icon"
-            href="/assets/media/image/logo/logo-mini-icon.png"
+            href="/assets/media/image/logo/logo square.png"
         />
 
         <title>Cloost SMP</title>
@@ -36,8 +36,40 @@
                     />
                     Discord-сервер
                 </a>
+                <button class="btn-menu icon-default" onclick="MenuToggle()">
+                    <svg
+                        width="24"
+                        height="17"
+                        viewBox="0 0 24 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 16.5V13.8333H24V16.5H0ZM0 9.83333V7.16667H24V9.83333H0ZM0 3.16667V0.5H24V3.16667H0Z"
+                            fill="#2A2F33"
+                        />
+                    </svg>
+                </button>
             </div>
         </header>
+
+        <div class="header-menu">
+            <div class="container">
+                <nav class="header-menu__nav">
+                    <a class="link-main" href="/">главная</a>
+                    <a class="link-main" href="/rules">правила</a>
+                    <a class="link-main" href="/#modpack">модпак</a>
+                </nav>
+                <a href="https://discord.gg" class="btn-main">
+                    <img
+                        src="/assets/media/image/icons/vector/discord-icon-svgrepo-com 1.svg"
+                        alt="Discord"
+                        class="icon-default"
+                    />
+                    Discord-сервер
+                </a>
+            </div>
+        </div>
 
         <div
             class="banner__wrapper"
@@ -254,7 +286,7 @@
                                 </div>
                                 <div class="photo-slider__dots-container">
                                     <div
-                                        class="slider-dot slider-dot-acitve"
+                                        class="slider-dot slider-dot-active"
                                         onclick="PhotoSlideTo(0)"
                                     ></div>
                                     <div
@@ -273,19 +305,23 @@
                                             alt="Версия"
                                             class="icon-default"
                                         />
-                                        1.16.5
+                                        1.16.2
                                     </span>
                                 </div>
-                                <p>
-                                    Первый сезон SMP был пилотным и
-                                    характеризовался установлением
-                                    государственных принципов. На территории с
-                                    общим складом и небольшой горой происходило
-                                    множество увлекательных событий: от выборов
-                                    и развития бизнеса до войны между Разином и
-                                    правительством, закончившейся его падением
-                                    из-за обвинений в использовании читов.
-                                </p>
+                                <div class="history__info-text">
+                                    <p>
+                                        Первый сезон SMP был пилотным и
+                                        характеризовался установлением
+                                        государственных принципов. На территории
+                                        с общим складом и небольшой горой
+                                        происходило множество увлекательных
+                                        событий: от выборов и развития бизнеса
+                                        до войны между игроком Разиным и
+                                        правительством, закончившейся его
+                                        падением из-за обвинений в использовании
+                                        читов.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -294,20 +330,14 @@
                                 <div class="photo-slider__img-container">
                                     <div class="photo-slider__img">
                                         <img
-                                            src="/assets/media/image/sections/history/smp1-1.png"
-                                            alt="smp1-1"
-                                        />
-                                    </div>
-                                    <div class="photo-slider__img">
-                                        <img
-                                            src="/assets/media/image/sections/history/smp1-1.png"
-                                            alt="smp1-1"
+                                            src="/assets/media/image/sections/history/smp2/photo_2024-07-17_00-42-56.jpg"
+                                            alt="smp2"
                                         />
                                     </div>
                                 </div>
                                 <div class="photo-slider__dots-container">
                                     <div
-                                        class="slider-dot slider-dot-acitve"
+                                        class="slider-dot slider-dot-active"
                                         onclick="PhotoSlideTo(0)"
                                     ></div>
                                     <div
@@ -317,9 +347,9 @@
                                 </div>
                             </div>
                             <div class="history__info">
-                                <h3>Cloost SMP 1</h3>
+                                <h3>Cloost SMP 2</h3>
                                 <div class="history__info-stats">
-                                    <span>2021</span>
+                                    <span>2022</span>
                                     <span
                                         ><img
                                             src="/assets/media/image/icons/vector/version.svg"
@@ -329,22 +359,75 @@
                                         1.16.5
                                     </span>
                                 </div>
-                                <p>
-                                    Первый сезон SMP был пилотным и
-                                    характеризовался установлением
-                                    государственных принципов. На территории с
-                                    общим складом и небольшой горой происходило
-                                    множество увлекательных событий: от выборов
-                                    и развития бизнеса до войны между Разином и
-                                    правительством, закончившейся его падением
-                                    из-за обвинений в использовании читов.
-                                </p>
+                                <div class="history__info-text">
+                                    <p>
+                                        Второй сезон SMP был похож на
+                                        анархо-деревню, где игроки строили дома
+                                        самостоятельно без какого-либо плана. В
+                                        центре событий был Разин, который
+                                        устроил свою секту, но его устранили
+                                        внедрив в нее шпиона. Сезон закончился
+                                        из-за непредвиденных событий от игрока
+                                        Fafik, который залил весь город лавой.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="history__slider-element">
+                            <div class="photo-slider">
+                                <div class="photo-slider__img-container">
+                                    <div class="photo-slider__img">
+                                        <img
+                                            src="/assets/media/image/sections/history/smp1/2024-07-17_00.56.13.png"
+                                            alt="smp2"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="photo-slider__dots-container">
+                                    <div
+                                        class="slider-dot slider-dot-active"
+                                        onclick="PhotoSlideTo(0)"
+                                    ></div>
+                                    <div
+                                        class="slider-dot"
+                                        onclick="PhotoSlideTo(1)"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="history__info">
+                                <h3>Cloost SMP 3</h3>
+                                <div class="history__info-stats">
+                                    <span>2023</span>
+                                    <span
+                                        ><img
+                                            src="/assets/media/image/icons/vector/version.svg"
+                                            alt="Версия"
+                                            class="icon-default"
+                                        />
+                                        1.19.2
+                                    </span>
+                                </div>
+                                <div class="history__info-text">
+                                    <p>
+                                        Третий сезон SMP был самым масштабным за
+                                        всю историю сервера. Здесь произошло
+                                        множество событий таких как битвы между
+                                        враждующими городами, создание тайной
+                                        группировки терроризировавшей города, её
+                                        раскол ближе к середине сезона, и
+                                        множество других.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="history__slider-controls">
-                        <button class="history__slider-control-btn btn-arrow">
+                        <button
+                            class="history__slider-control-btn btn-arrow"
+                            onclick="HistoryPrevSlide()"
+                        >
                             <img
                                 style="transform: rotate(-90deg)"
                                 src="/assets/media/image/icons/vector/arrow.svg"
@@ -353,12 +436,16 @@
                         </button>
                         <div class="history__slider-dots">
                             <div
-                                class="slider-dot-dark slider-dot-acitve"
+                                class="slider-dot-dark slider-dot-active"
                                 onclick="HistorySlideTo(0)"
                             ></div>
                             <div
                                 class="slider-dot-dark"
                                 onclick="HistorySlideTo(1)"
+                            ></div>
+                            <div
+                                class="slider-dot-dark"
+                                onclick="HistorySlideTo(2)"
                             ></div>
                         </div>
                         <button
@@ -376,6 +463,9 @@
             </section>
 
             <section class="call-to-action container">
+                <h2 class="text__heading-accent call-to-action__heading-mobile">
+                    Присоединяйся к CloostSMP
+                </h2>
                 <div class="call-to-action__text">
                     <div class="call-to-action__heading">
                         <h2 class="text__heading-accent">
@@ -412,7 +502,7 @@
                             alt="Discord"
                             class="icon-default"
                         />
-                        Присоедниниться
+                        Присоединиться
                     </a>
                 </div>
                 <div class="call-to-action__image">
@@ -420,6 +510,19 @@
                         src="/assets/media/image/banner/banner airship its own size 2.png"
                         alt="Дирижабль"
                     />
+                </div>
+                <div class="btn-mobile__container">
+                    <a
+                        href="https://discord.gg"
+                        class="btn-main call-to-action__btn call-to-action__btn-mobile"
+                    >
+                        <img
+                            src="/assets/media/image/icons/vector/discord-icon-svgrepo-com 1.svg"
+                            alt="Discord"
+                            class="icon-default"
+                        />
+                        Присоединиться
+                    </a>
                 </div>
             </section>
 
@@ -618,7 +721,16 @@
                     <div class="mod-info__container">
                         <div class="mod-info__card">
                             <div class="mod-info__card-media">
-                                <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YicXdyDFWuw" title="This is Create: Above and Beyond" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                                <iframe
+                                    width="100%"
+                                    height="auto"
+                                    src="https://www.youtube.com/embed/YicXdyDFWuw"
+                                    title="This is Create: Above and Beyond"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="no-referrer"
+                                    allowfullscreen
+                                ></iframe>
                             </div>
                             <div class="mod-info__card-text">
                                 <h3>Create, а также дополнения к нему</h3>
@@ -646,7 +758,7 @@
         </main>
 
         <footer>
-            <div class="header__wrapper container">
+            <div class="footer__wrapper container">
                 <div class="header__logo logo-nav">
                     <div class="header__logo-icon">
                         <img
@@ -688,5 +800,6 @@
         </footer>
 
         <script src="/assets/js/slider.js"></script>
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>
