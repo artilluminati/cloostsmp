@@ -22,9 +22,9 @@ function CopyAdress(elem) {
 }
 
 function SetSliderHeights() {
-    document.querySelector(".history__slider-wrapper").style.Height = `100%`;
+    document.querySelector(".history__slider-wrapper").style.height = `100%`;
 
-    if (window.matchMedia("min-width: 765px")) {
+    if (window.matchMedia("(min-width: 765px)").matches) {
         const maxSliderTextHeight =
             document.querySelectorAll(".photo-slider__img img")[0]
                 .offsetHeight - 112;
@@ -38,7 +38,7 @@ function SetSliderHeights() {
         )[0].offsetHeight;
 
         document.querySelectorAll(".history__info-text").forEach((card) => {
-            card.style.maxHeight = `${maxSliderTextHeight * 2}px`;
+            card.style.maxHeight = `${maxSliderTextHeight}px`;
         });
     }
 
@@ -56,7 +56,7 @@ function SetSliderHeights() {
 }
 
 function SetBannerVideo() {
-    if (window.matchMedia("min-width: 765px")) {
+    if (window.matchMedia("(min-width: 765px)").matches) {
         document.querySelector(".banner__bg-layer").innerHTML = `<video
         src="assets/media/video/banner-bg-shader-video.mp4"
         autoplay
