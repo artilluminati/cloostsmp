@@ -1191,6 +1191,14 @@ video {
         /* background: rgba(256, 256, 256, 0.3); */
         max-height: calc(100dvh - 65px);
     }
+    .banner-content__buttons {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .mods__download-btns {
+        flex-direction: column;
+        row-gap: 10px;
+    }
 }
 
 @media screen and (max-width: 560px) {
