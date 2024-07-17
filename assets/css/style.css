@@ -1189,7 +1189,7 @@ video {
     .banner__layers,
     .banner__wrapper {
         /* background: rgba(256, 256, 256, 0.3); */
-        max-height: calc(100dvh - 65px);
+        max-height: calc(100vh - 65px);
     }
     .banner-content__buttons {
         margin-top: 0;
