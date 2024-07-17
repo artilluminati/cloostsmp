@@ -1068,6 +1068,23 @@ video {
         row-gap: 40px;
     }
 
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        row-gap: 25px;
+        border-bottom: none;
+    }
+    .footer__wrapper .header__logo {
+        border-bottom: 2px solid rgba(75, 98, 112, 0.2);
+        padding-block: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
     .footer__labels {
         display: flex;
         flex-direction: column-reverse;
@@ -1078,18 +1095,61 @@ video {
     }
 }
 @media screen and (max-width: 600px) {
+    .banner__layers {
+        background: rgba(256, 256, 256, 0.3);
+    }
 }
 
 @media screen and (max-width: 560px) {
     :root {
         --gutter: 15px;
     }
+    .text__heading-accent {
+        font-size: 32px;
+    }
+    .text__heading-main {
+        font-size: 30px;
+    }
+    .features__card-text,
+    .call-to-action__text h3 {
+        font-size: 20px;
+    }
+    .about__text p {
+        font-size: 18px;
+    }
+    .about-slider__card-text,
+    .history__info p,
+    .world-map__text,
+    .mods__tab-text p {
+        font-size: 16px;
+    }
+    .mods__tab-text p:first-of-type {
+        margin-top: 0;
+    }
+    .mods__tab-text p:last-of-type {
+        margin-bottom: 30px;
+    }
+    .mods__tab-text h3 {
+        display: none;
+    }
+    .mods__tab-title-mobile {
+        font-size: 24px;
+        margin-top: 60px;
+    }
+    .mods__tab-content {
+        display: flex;
+        flex-direction: column;
+    }
+
     .banner-content__game-info {
         flex-direction: column;
         justify-content: flex-start;
         row-gap: 16px;
         align-items: center;
         background: none;
+    }
+    .banner-content__game-info * {
+        color: var(--text-heading);
     }
     .ip-adress::after {
         bottom: 0;
