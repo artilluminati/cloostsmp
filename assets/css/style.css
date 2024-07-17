@@ -1186,8 +1186,10 @@ video {
     }
 }
 @media screen and (max-width: 600px) {
-    .banner__layers {
-        background: rgba(256, 256, 256, 0.3);
+    .banner__layers,
+    .banner__wrapper {
+        /* background: rgba(256, 256, 256, 0.3); */
+        max-height: calc(100dvh - 65px);
     }
 }
 
