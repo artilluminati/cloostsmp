@@ -951,11 +951,13 @@ video {
     margin-top: 70px;
     display: flex;
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .mod-info__card {
     flex-shrink: 0;
     width: 100%;
+    height: max-content;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
