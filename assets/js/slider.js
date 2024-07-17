@@ -83,7 +83,9 @@ function aboutNextSlide() {
 ModGuideTabSelect = (targetTab) => {
     modGuideCards.forEach((card) => {
         card.style = `transform: translateX(-${targetTab * 100}%)`;
+        card.classList.remove("modsCardAnimation");
     });
+    modGuideCards[targetTab].classList.add("modsCardAnimation");
     modGuideTabs.forEach((tab) => {
         tab.classList.remove("btn-tab-active");
     });
@@ -93,7 +95,9 @@ ModGuideTabSelect = (targetTab) => {
 ModTabSelect = (targetTab) => {
     modInfoCards.forEach((card) => {
         card.style = `transform: translateX(-${targetTab * 100}%)`;
+        card.classList.remove("modsCardAnimation");
     });
+    modInfoCards[targetTab].classList.add("modsCardAnimation");
     modInfoTabs.forEach((tab) => {
         tab.classList.remove("btn-tab-active");
     });

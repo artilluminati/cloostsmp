@@ -468,6 +468,7 @@ video {
     padding-inline: 15px;
     display: flex;
     justify-content: flex-end;
+    z-index: 17;
 }
 .banner__airship-layer img {
     width: 319px;
@@ -478,6 +479,7 @@ video {
     height: calc(100vh - 65px);
     width: 100vw;
     overflow: hidden;
+    z-index: 5;
 }
 .banner__bg-layer video {
     object-fit: cover;
@@ -486,10 +488,12 @@ video {
     width: 100%;
     background: transparent;
     animation: none;
+    z-index: 5;
 }
 
 .banner__arrow-icon {
     padding-bottom: 90px;
+    z-index: 15;
 }
 
 .banner__layers {
@@ -883,6 +887,18 @@ video {
     grid-template-columns: 3fr 1fr 4fr;
     grid-template-areas: "text . video";
 }
+.modsCardAnimation {
+    animation: modGuideCard 0.3s ease-in-out;
+}
+@keyframes modGuideCard {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .mods__tab-text {
     grid-area: text;
 }
@@ -932,9 +948,14 @@ video {
 
 .mod-info__container {
     margin-top: 70px;
+    display: flex;
+    overflow-x: hidden;
 }
 
 .mod-info__card {
+    flex-shrink: 0;
+    width: 100%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--gutter);
