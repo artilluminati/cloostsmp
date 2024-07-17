@@ -6,6 +6,12 @@ const historySliderDots = document.querySelectorAll(".slider-dot-dark");
 const aboutSliderProgressbar = document.querySelector(
     ".about-slider__progressbar"
 );
+const modGuideCards = document.querySelectorAll(".mods__tab-content");
+const modGuideTabs = document.querySelectorAll(".mods__guide-tabs .btn-tab");
+
+const modInfoCards = document.querySelectorAll(".mod-info__card");
+const modInfoTabs = document.querySelectorAll(".mod-info__tabs .btn-tab");
+
 var aboutSlideNum = 0;
 var historySlideNum = 0;
 var aboutTimeout;
@@ -73,6 +79,26 @@ function aboutNextSlide() {
     window.clearTimeout(aboutTimeout);
     aboutToSlide();
 }
+
+ModGuideTabSelect = (targetTab) => {
+    modGuideCards.forEach((card) => {
+        card.style = `transform: translateX(-${targetTab * 100}%)`;
+    });
+    modGuideTabs.forEach((tab) => {
+        tab.classList.remove("btn-tab-active");
+    });
+    modGuideTabs[targetTab].classList.add("btn-tab-active");
+};
+
+ModTabSelect = (targetTab) => {
+    modInfoCards.forEach((card) => {
+        card.style = `transform: translateX(-${targetTab * 100}%)`;
+    });
+    modInfoTabs.forEach((tab) => {
+        tab.classList.remove("btn-tab-active");
+    });
+    modInfoTabs[targetTab].classList.add("btn-tab-active");
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     aboutToSlide();

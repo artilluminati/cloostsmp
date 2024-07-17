@@ -331,12 +331,19 @@ video {
     flex-direction: column;
     align-items: center;
 
-    row-gap: 32px;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.5) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    row-gap: 25px;
 }
 .banner-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
-    font-size: 76px;
+    font-size: 68px;
     text-align: center;
     color: var(--text-heading);
 
@@ -354,15 +361,22 @@ video {
     justify-content: center;
     align-items: flex-start;
     column-gap: 50px;
-    background-color: #ffffff3d;
+    /* background-color: #ffffff3d; */
     border-radius: 5px;
     /* box-shadow: 0 0 50px rgba(255, 255, 255), 0 0 50px rgba(255, 255, 255); */
     filter: drop-shadow(0 0 100px rgba(255, 255, 255));
+    /* backdrop-filter: blur(20px); */
 
     /* text-shadow: 0 0 100px rgba(255, 255, 255); */
 }
-.banner-content__game-info * {
+.banner-content__game-info *,
+.call-to-action__game-info * {
     /* box-shadow: 0 0 100px rgba(255, 255, 255); */
+    font-size: 18px;
+    color: var(--text-main);
+}
+.call-to-action__game-info input {
+    text-align: left;
 }
 .ip-adress {
     cursor: pointer;
@@ -395,12 +409,30 @@ video {
 
     transition: opacity 0.3s ease-in-out;
 }
+.ip-adress__copied::after {
+    content: "Скопировано" !important;
+}
 .ip-adress__wrapper:hover .ip-adress::after {
     opacity: 1;
 }
 .ip-adress__content {
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 10px;
+}
+.ip-adress__content input {
+    display: inline-block;
+    border: none;
+    background: none;
+    width: min-content;
+    max-width: 150px;
+    padding: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
 }
 .ip-adress .icon-default {
     border: none;
@@ -440,6 +472,20 @@ video {
 .banner__airship-layer img {
     width: 319px;
     height: 397px;
+}
+
+.banner__bg-layer {
+    height: calc(100vh - 65px);
+    width: 100vw;
+    overflow: hidden;
+}
+.banner__bg-layer video {
+    object-fit: cover;
+    object-position: bottom;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    animation: none;
 }
 
 .banner__arrow-icon {
@@ -638,7 +684,7 @@ video {
     font-size: 20px;
     color: var(--text-main);
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .history__info-stats span {
     display: flex;
@@ -870,12 +916,18 @@ video {
     overflow-y: visible;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    cursor: grab;
 }
 .mod-info__tabs::-webkit-scrollbar {
     display: none;
 }
 .mod-info__tabs > button {
     flex-shrink: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 
 .mod-info__container {
@@ -950,7 +1002,8 @@ video {
 
 .call-to-action__heading-mobile,
 .call-to-action__btn-mobile,
-.btn-mobile__container {
+.btn-mobile__container,
+.mods__tab-title-mobile {
     display: none;
 }
 
@@ -1002,6 +1055,17 @@ video {
         display: flex;
         flex-direction: column-reverse;
         row-gap: 20px;
+    }
+    .history__slider-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .history__slider-dots {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
     }
 
     .call-to-action__heading-mobile,
@@ -1104,7 +1168,8 @@ video {
     :root {
         --gutter: 15px;
     }
-    .text__heading-accent {
+    .text__heading-accent,
+    .banner-content h1 {
         font-size: 32px;
     }
     .text__heading-main {
@@ -1120,7 +1185,8 @@ video {
     .about-slider__card-text,
     .history__info p,
     .world-map__text,
-    .mods__tab-text p {
+    .mods__tab-text p,
+    .banner-content h2 {
         font-size: 16px;
     }
     .mods__tab-text p:first-of-type {
@@ -1180,5 +1246,13 @@ video {
     }
     .history__slider-controls {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .call-to-action {
+        grid-template-areas: "heading" "text" "btn";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
     }
 }
